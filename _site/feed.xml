@@ -7,6 +7,20 @@
     <atom:link href="http://mazicky.github.io/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>React-Transform</title>
+        
+        
+          <description>&lt;h1&gt;React-Transform&lt;/h1&gt;
+
+&lt;p&gt;React Transform은 기본적으로 &lt;a href=&quot;http://nodejs.github.io/iojs-ko/articles/2015/05/11/story-about-js-and-babel/&quot;&gt;babel&lt;/a&gt; plugin이다. 트랜스파일러인 babel을 이용해, React Component들을 커스터마이징해서 쓸 수 있게 해주는 것이다.  &lt;/p&gt;
+</description>
+        
+        <pubDate>Mon, 21 Sep 2015 15:00:00 +0900</pubDate>
+        <link>http://mazicky.github.io/2015/react-transform/</link>
+        <guid isPermaLink="true">http://mazicky.github.io/2015/react-transform/</guid>
+      </item>
+    
+      <item>
         <title>Redux란?</title>
         
         
