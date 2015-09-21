@@ -19,10 +19,11 @@ React Transform은 기본적으로 [babel](http://nodejs.github.io/iojs-ko/artic
 
 우선, 플러그인을 설치한다.
 
-`npm install --save-dev babel-plugin-react-transform`
+	npm install --save-dev babel-plugin-react-transform
 
-사용하고싶은 react-transform을 설치한다.
-`npm install --save-dev react-transform-hmr`
+사용하고싶은 react-transform을 설치한다.  
+
+	npm install --save-dev react-transform-hmr
 
 `.babelrc` 이 없다면 파일을 만들고, `extra.react-transform`을 include한다. 해당 필드는 사용하고 싶은 transform들의 array여야한다.
 
