@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Mazicky</title>
+    <description>Full-Stack Web Development &amp; Indie Game Development</description>
+    <link>http://mazicky.github.io</link>
+    <atom:link href="http://mazicky.github.io/feed.xml" rel="self" type="application/rss+xml" />
+    
+      <item>
+        <title>Redux란?</title>
+        
+        
+          <description>&lt;h1&gt;Redux? Flux?&lt;/h1&gt;
+
+&lt;p&gt;Facebook은, React.js를 이용하여 웹-클라이언트를 개발할 때, Flux 아키텍쳐를 이용하고 있다. 데이터의 흐름을 정의하여, 프로젝트가 커지더라도 일정 수준 이상의 복잡도를 넘지 않게 하는 것이 이 아키텍쳐의 의도인 것 같다.  &lt;/p&gt;
+</description>
+        
+        <pubDate>Mon, 21 Sep 2015 13:50:00 +0900</pubDate>
+        <link>http://mazicky.github.io/2015/redux/</link>
+        <guid isPermaLink="true">http://mazicky.github.io/2015/redux/</guid>
+      </item>
+    
+  </channel>
+</rss>
