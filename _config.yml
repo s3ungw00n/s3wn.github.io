@@ -22,7 +22,7 @@ authorTwitter:  'mazicky'
 permalink:       /:year/:title/
 
 home_url: 'http://mazicky.github.io'
-representing_image: "/images/avatar@2x.png"
+representing_image: '/images/favicon.jpg'
 
 defaults:
     -
