@@ -5,7 +5,7 @@ meta_description: "Full-Stack Web Development & Indie Game Development"
 aboutPage: true
 
 markdown: kramdown
-highlighter: pygments
+highlighter: rouge 
 
 gems: [jekyll-paginate]
 paginate: 20
