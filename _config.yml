@@ -4,7 +4,7 @@ meta_description: "Full-Stack Web Development & Indie Game Development"
 
 aboutPage: true
 
-markdown: redcarpet
+markdown: kramdown
 highlighter: pygments
 
 gems: [jekyll-paginate]
