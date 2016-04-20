@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Mazicky - [ES6] Promise</title>
+  <link rel="shortcut icon" href="/assets/images/favicon.ico">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="alternate" type="application/rss+xml" title="My Blog" href="/rss.xml">
+  <link rel="stylesheet" href="/assets/css/highlight.css">
+</head>
+<body>
+
+  <nav class="main-nav">
+    
+        <a href="/"> <span class="arrow">←</span> Home </a>
+    
+
+    
+        
+            <a href="/about">About </a>
+        
+    
+    <a class="cta" href="/feed.xml">Subscribe</a>
+</nav>
+
+  
+
+  <section id="wrapper" class="">
+    <article class="post">
+    <header>
+        <h1>[ES6] Promise</h1>
+        <h2 class="headline">September 23, 2015</h2>
+    </header>
+    <section id="post-body">
+        <h1>Promise</h1>
+
+<p>Promise란 비동기, 또는 연기된 연산작업을 할 때 사용되는 기술이다. (출처: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">공식문서</a>) 기존에도 여러 라이브러리에서도 자체구현하거나, Polyfill로 사용하고있었는데, ES6에서 공식지원하기 시작했다.</p>
+
+<h1>문법</h1>
+<div class="highlight"><pre><code class="language-text" data-lang="text">new Promise(executor);
+new Promise(function(resolve, reject) { ... });
+</code></pre></div>
+<p>executor는 함수 오브젝트이고, 그 함수는 resolve, reject를 인자로 받는다. 이름그대로, resolve는 promise가 성공적으로 수행되었을때(fulfilled), reject는 실패/거절할때(rejected) 한번씩 호출할 함수들이다.</p>
+
+<h1>개요</h1>
+
+<p>Promise는 비동기작업에 대해서, 성공, 실패의 핸들러를 가질 수 있다. 어떠한 비동기함수가 Promise를 리턴하게 된다면, 마치 동기함수처럼 리턴값을 가지는 형태로 작업을 처리할 수 있을 것이다.</p>
+
+<p>Promise의 상태는 3가지로 정의할수 있는데,  Pending, Fulfilled, Rejected 이다. 처음 init 되면 Pending에서 시작하며, promise의 <code>then</code>메소드가 호출됨으로써 Fulfilled, Rejected 각각의 핸들러가 큐잉된다. Promise가 Fulfilled, Rejected상태로 변경된 상태를 settle되었다고 표현한다.</p>
+
+<p><code>then</code>, <code>catch</code> 메소드는 promise를 리턴하므로, 체이닝하여 사용할 수 있다.(!)</p>
+
+<h1>예제</h1>
+
+<p>먼저, Promise를 생성하는 방법을 알아보자.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">var promise = new Promise(function(resolve, reject) {   
+  if (something.works) {
+    resolve(&quot;worked!&quot;);
+  }
+  else {
+    reject(Error(&quot;woops!&quot;));
+  }
+});
+</code></pre></div>
+<p>인자로 함수를 받아, 특정조건을 만족하면, 콜백을 호출해 주는 식이다. 앞서 말한 것처럼, 성공하면 resolve를, 실패하면 reject를 호출한다.</p>
+
+<p>이것을 사용하는 법은 다음과 같다.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">promise.then(function(result) {
+    console.log(result); // &quot;worked!&quot;
+}, function(err) {
+    console.log(err); // Error: &quot;woops!&quot;
+});
+</code></pre></div>
+<p>실제로, 이미지를 로딩한다고 하면 다음과같이 쓸 것이다.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">img1.ready().then(function() {
+  // 로딩되었을 때
+}, function() {
+  // 실패했을 때
+});
+
+// 그리고…
+Promise.all([img1.ready(), img2.ready()]).then(function() {
+  // 모두 로딩되었을 때
+}, function() {
+  // 하나 이상이 실패했을 때
+});
+</code></pre></div>
+<p>Promise.all은 인자로 온 promise들이 전부 완료 되면, settle상태로 들어가는 역할을 한다. </p>
+
+<p>내가 참고한 예제사이트가 글이 참 재미있게 되어있고, 심도있는 내용을 담고있으니 꼭 확인해보기 바란다
+(<a href="http://www.html5rocks.com/ko/tutorials/es6/promises/">예제참고</a>)</p>
+
+<h1>마무리</h1>
+
+<p>얼마전 XCode가 7로 버전업 되면서 강제로 swift 2.0을 사용하게 되었는데, 나한테 가장 큰 변화점이 &#39;async로 다 바꿔!&#39; 라는 거 였다. 머리로는 이해하지만, 귀찮다고 생각을 했는데, 문득 promise를 보다보니 아! 얘네들이 이런걸 지향한거구나! 라고 알게되었다. 코드 사이사이에 있던 dispatch()등이 이러한 노력의 산물이었던 것 같다.(<a href="https://medium.com/@robringham/promises-in-swift-66f377c3e403">Promises in Swift</a>)  </p>
+
+<p>ES6 generator를 이용한 yield 코루틴에 대한 내용도 재밌어보여서 공부해서 또 글을 써봐야겠다. </p>
+
+    </section>
+</article>
+<footer id="post-meta" class="clearfix">
+    <a href="http://twitter.com/mazicky">
+        <img class="avatar" src="/assets/images/avatar.png">
+        <div>
+            <span class="dark">mazicky</span>
+            <span>Full-Stack Web Development & Indie Game Development</span>
+        </div>
+    </a>
+
+    <section id="sharing">
+        <a class="twitter" href="https://twitter.com/intent/tweet?text=http://mazicky.github.io/2015/javascript-promise/ - [ES6] Promise by @mazicky"><span class="icon-twitter"> Tweet</span></a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect"> Share</span>
+</a>
+    </section>
+</footer>
+
+<!-- Disqus comments -->
+
+    <div class="archive readmore">
+        <h3>Comments</h3>
+        <section class="disqus">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_shortname = 'mazicky';
+        var disqus_developer = 0; // developer mode is on
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+    </div>
+
+
+<!-- Archive post list -->
+
+
+
+
+
+  </section>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="/assets/js/main.js"></script>
+  <script src="/assets/js/highlight.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-67859986-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+</body>
+</html>
+
+
+
