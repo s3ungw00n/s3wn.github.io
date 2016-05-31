@@ -13,6 +13,7 @@ baseurl: /
 domain_name: 'http://mazicky.github.io'
 google_analytics: 'UA-67859986-1'
 disqus: true
+future: true
 disqus_shortname: 'mazicky'
 
 # Details for the RSS feed generator
