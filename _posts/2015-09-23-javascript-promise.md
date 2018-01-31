@@ -1,11 +1,9 @@
 ---
-category: category
-title:  "[ES6] Promise"
-date:   2015-09-23 16:53
-tags: javascript, es6, promise
-comments: true
+layout: post
+title: '[ES6] Promise'
+categories: [dev]
+tags: [react]
 ---
-#Promise
 Promise란 비동기, 또는 연기된 연산작업을 할 때 사용되는 기술이다. (출처: [공식문서](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)) 기존에도 여러 라이브러리에서도 자체구현하거나, Polyfill로 사용하고있었는데, ES6에서 공식지원하기 시작했다.
 
 #문법

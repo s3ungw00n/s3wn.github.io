@@ -1,11 +1,9 @@
 ---
-category: react
-title:  "React.js에서 Mocha 로 TDD 해보기"
-tags: javascript, react, tdd, mocha, chai, primeFactor
-comments: true
+layout: post
+title: 'React.js에서 Mocha 로 TDD 해보기'
+categories: [dev]
+tags: [react, tdd]
 ---
-
-# React.js에서 Mocha 로 TDD 해보기
 
   최근에 만난 멘토님께 TDD에 관하여 멘토링을 받았는데 너무 충격적이고 재미있어서! TDD포스팅을 해보려한다. 멘토링 자체는  [CyberDojo](http://www.cyber-dojo.org) 에서 진행하였는데, 다양한 언어로 TDD로 다양한 문제들을 풀어볼 수 있어서 자주 들어가서 이용해야겠다. 
   

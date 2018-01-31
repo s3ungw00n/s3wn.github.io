@@ -1,12 +1,9 @@
 ---
 layout: post
-category: web
-title:  "React-Transform"
-date:   2015-09-21 15:00
-tags: javascript, react, flux, redux 
-comments: true
+title: 'React-Transform'
+categories: [dev]
+tags: [react]
 ---
-#React-Transform
 React Transform은 기본적으로 [babel](http://nodejs.github.io/iojs-ko/articles/2015/05/11/story-about-js-and-babel/) plugin이다. 트랜스파일러인 babel을 이용해, React Component들을 커스터마이징해서 쓸 수 있게 해주는 것이다.  
 
 현재 React Hot Loader도 deprecated되고 react-transform 기반으로 만들어진 react-transform-hmr로 넘어간 상태다. 
