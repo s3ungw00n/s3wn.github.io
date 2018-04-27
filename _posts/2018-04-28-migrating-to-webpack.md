@@ -1,8 +1,13 @@
-Migrating to Webpack
-
-mazicky
+---
+layout: post
+title: Migrating to Webpack
+categories: [dev]
+tags: [python]
+---
+<!-- $theme: gaia -->
 
 ---
+# Plan
 
 Current Project : Django + django template
 
@@ -10,7 +15,7 @@ To be : Django + webpack bundled frontend
 
 ---
 
-Pros and Cons When uses webpack
+# Pros and Cons When uses webpack
 
 Pros
 - my heart wants it (hipster)
@@ -79,6 +84,7 @@ webpacks
 ```
 ---
 django entry template ('PROJECT_ROOT/templates/index.html')
+{% raw %}
 ```
 <!DOCTYPE html>
 <html>
@@ -96,6 +102,8 @@ django entry template ('PROJECT_ROOT/templates/index.html')
 </html>
 
 ```
+{% endraw %}
+---
 
 url.py
 ```
