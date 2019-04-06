@@ -1,38 +1,39 @@
-# visit https://github.com/mojombo/jekyll/wiki/Configuration for more settings
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 
-paginate: 10 # pagination based on number of posts
-paginate_path: "page:num"
-exclude: ["README.md"] # files to exclude
-highlighter: rouge
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+title: maizkcy means Magic Key
+email: mazicky@gmail.com
+description: >- # this means to ignore newlines until "baseurl:"
+  오늘 = 어제 + 1
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: def__maz__
+github_username:  mazicky
+
+# Build settings
 markdown: kramdown
-disqus: mazicky
-google_analytics: mazicky
-title: mazicky
+theme: minima
 
-defaults:
-  -
-    scope:
-      path: "" # empty string for all files
-    values:
-      title: mazicky
-
-description: WEB DEV GEEK
-author:
-  name: mazicky
-  email: mazicky@gmail.com
-  github: mazicky
-  twitter: maz_developer
-  bio: WEB DEV GEEK!
-  email_md5: da167633d4d71972eded08954a3c1c0c
-
-rss_path: feed.xml
-categories_path: categories.html
-tags_path: tags.html
-
-# set it as url of an image
-# sidebar_background_image: https://www.dropbox.com/s/g9h23zrycedxtk5/sky.png?raw=1
-
-BASE_PATH:
-
-plugins:
-  - jekyll-paginate
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
