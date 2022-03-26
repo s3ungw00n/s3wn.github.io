@@ -37,3 +37,14 @@ theme: minima
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+kramdown:
+  typographic_symbols:
+    {
+      hellip: ...,
+      mdash: " ---",
+      ndash: " --",
+      laquo: "<<",
+      raquo: ">>",
+      laquo_space: "<< ",
+      raquo_space: " >>",
+    }
