@@ -19,8 +19,8 @@ description: >- # this means to ignore newlines until "baseurl:"
   오늘 = 어제 + 1
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://blog.s3wn.com" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: __s3wn
-github_username:  s3wn
+twitter_username: happyhack1ng
+github_username:  s3ungw00n
 
 # Build settings
 markdown: kramdown
